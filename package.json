@@ -1,5 +1,5 @@
 {
-  "name": "get-alcampo-products",
+  "name": "alcampo-scrapper",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
@@ -10,15 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tommytrg/get-alcampo-products.git"
+    "url": "git+https://github.com/Tommytrg/alcampo-scrapper.git"
   },
   "bugs": {
-    "url": "https://github.com/Tommytrg/get-alcampo-products/issues"
+    "url": "https://github.com/Tommytrg/alcampo-scrapper/issues"
   },
   "keywords": [],
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "request": "^2.81.0"
+    "jsonify-get-request": "^1.0.0"    
   },
   "devDependencies": {
     "coveralls": "latest",
