@@ -17,26 +17,21 @@
   },
   "keywords": [],
   "dependencies": {
-    "jsonify-get-request": "^1.0.0"    
+    "jsdom": "latest",
+    "x-ray": "^2.3.2"
   },
   "devDependencies": {
-    "coveralls": "latest",
-    "eslint": "^4.6.0",
-    "eslint-config-standard": "^10.2.1",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
     "mocha": "latest",
-    "nyc": "latest",
-    "should": "latest",
-    "standard": "latest",
-    "standard-markdown": "latest"
+    "should": "latest"
   },
   "engines": {
     "node": ">= 8"
   },
   "scripts": {
     "clean": "rm -rf node_modules",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "lint": "standard-markdown && standard",
-    "pretest": "npm run lint",
     "test": "nyc mocha"
   },
   "license": "MIT"
