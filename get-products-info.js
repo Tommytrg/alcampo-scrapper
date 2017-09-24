@@ -27,7 +27,6 @@ function getProductInformation(endpoint) {
           salt: '.foodSalt .kJ',
           saturated_fats: '.foodSaturatedFats .kJ',
           conservation: '.productConservationCoditions',
-
         },
       ],
     )((err, res) => {
@@ -38,10 +37,10 @@ function getProductInformation(endpoint) {
 }
 
 function getProductsInformation() {
-  const endpoints = readJSON('alcampo.json');
+  const endpoints = readJSON('alcampo-frescos.json');
 
   const products = [];
-  for (let i = 10000; i < 11000; i += 1) {
+  for (let i = 3000; i < 3500s; i += 1) {
     if (endpoints[i]) {
       products.push(getProductInformation(endpoints[i].url));
     }
@@ -49,9 +48,9 @@ function getProductsInformation() {
 
   Promise.all(products)
     .then((result) => {
-      const information = readJSON('alcampo-products10.json');
+      const information = readJSON('alcampo-frescos-productos.json');
       information.push(result);
-      fs.writeFileSync('alcampo-products11.json', JSON.stringify(information), 'utf8');
+      fs.writeFileSync('alcampo-frescos-productos.json', JSON.stringify(information), 'utf8');
     })
     .catch((err) => {
       console.log('err', err);
